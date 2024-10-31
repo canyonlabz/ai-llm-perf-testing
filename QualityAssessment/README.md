@@ -11,7 +11,7 @@ The following contains python scripts used to perform a quality assessment of LL
 [todo]
 
 ## Langchain Evalutaors:
-** Step 1: Install necessary python libraries.
+** Step 1: Install necessary python libraries. **
     Example: pip install langchain langfuse openai
 
 ### References:

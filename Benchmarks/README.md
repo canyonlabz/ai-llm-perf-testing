@@ -6,8 +6,8 @@ The following contains python scripts used to benchmark LLMs using known tools a
 
 ## Ollama:
 ** Step 1: Download and install Ollama. **
-    Example: > pip install ollama
-** Step 2: 
+    Example: pip install ollama
+** Step 2: **
 
 ### References:
 1. Ollama Python & JavaScript Libraries - https://ollama.com/blog/python-javascript-libraries
