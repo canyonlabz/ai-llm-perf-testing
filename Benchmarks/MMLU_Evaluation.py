@@ -48,6 +48,10 @@ def evaluate_model(subject):
     return accuracy
 
 def main():
+    with open('mmlu_evaluation_log.csv', mode='w', newline='', encoding='utf-8') as file:
+        csv_writer = csv.writer(file)
+        csv_writer.writerow(["Question", "Choices", "Correct Answer", "Model Response"])  # CSV headers
+    
     '''Evaluate the MMLU benchmark using the Ollama model.
     subjects = ["abstract_algebra", "anatomy", "astronomy", "business_ethics", "clinical_knowledge", 
                 "college_biology", "college_chemistry", "college_computer_science", "college_mathematics", 
@@ -68,7 +72,7 @@ def main():
                 
     scores = []
     for subject in subjects:
-        score = evaluate_model(subject)
+        score = evaluate_model(subject, csv_writer)  # Pass csv_writer here
         scores.append(score)
         print(f"{subject}: {score:.2%}")
 
