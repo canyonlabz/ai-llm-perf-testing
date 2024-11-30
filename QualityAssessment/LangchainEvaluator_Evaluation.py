@@ -1,9 +1,9 @@
 import ollama
-from langchain.llms import Ollama
+from langchain_ollama import OllamaLLM
 from langchain.evaluation import load_evaluator
 from langchain_core.prompts import PromptTemplate
 
-ollama_model = Ollama(model="llama3.1:8b")
+ollama_model = OllamaLLM(model="llama3.1:8b")
 
 def generate_response(prompt):
     return ollama_model.invoke(prompt)
